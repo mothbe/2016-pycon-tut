@@ -50,4 +50,10 @@ def test_consume_4():
     assert chars == 9
     assert words == 4
     assert lines == 1
-    
+
+def test_dividedbyzero():
+    try:
+        wordcount_lib.daaaangerous()
+    except ZeroDivisionError as e: 
+        assert True, 'Should throw ZeroDivisionError'
+
